@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             SizedBox(width: 10),
-            Text(
+            const Text(
               'Hi, Ishini!',
               style: TextStyle(
                 color: Colors.black,
@@ -32,23 +32,23 @@ class HomePage extends StatelessWidget {
         ),
         actions: [
           PopupMenuButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.more_vert,
               color: Colors.black,
               size: 40,
             ),
             itemBuilder: (BuildContext context) {
               return <PopupMenuEntry>[
-                PopupMenuItem(
+                const PopupMenuItem(
                   child: Text('Manage Categories'),
                 ),
-                PopupMenuItem(
+                const PopupMenuItem(
                   child: Text('Sync Data'),
                 ),
-                 PopupMenuItem(
+                 const PopupMenuItem(
                   child: Text('Help'),
                 ),
-                 PopupMenuItem(
+                 const PopupMenuItem(
                   child: Text('FAQ'),
                 ),
                 // Add more items as needed
@@ -57,7 +57,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(
+      body: const Center(
         child: Text('Home Screen'),
       ),
     );
