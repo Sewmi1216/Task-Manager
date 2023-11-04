@@ -9,36 +9,57 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         title: Row(
-          children:[
+          children: [
             Container(
               height: 45,
               width: 45,
               margin: EdgeInsets.only(left: 15),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
-                child: Image.asset('assets/images/profie.jpg'),
-                ),
+                child: Image.asset('assets/images/profile.jpg'),
+              ),
             ),
             SizedBox(width: 10),
-            const Text(
+            Text(
               'Hi, Ishini!',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 26,
-              fontWeight: FontWeight.bold),
-
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
+        ),
+        actions: [
+          PopupMenuButton(
+            icon: Icon(
+              Icons.more_vert,
+              color: Colors.black,
+              size: 40,
+            ),
+            itemBuilder: (BuildContext context) {
+              return <PopupMenuEntry>[
+                PopupMenuItem(
+                  child: Text('Manage Categories'),
+                ),
+                PopupMenuItem(
+                  child: Text('Sync Data'),
+                ),
+                 PopupMenuItem(
+                  child: Text('Help'),
+                ),
+                 PopupMenuItem(
+                  child: Text('FAQ'),
+                ),
+                // Add more items as needed
+              ];
+            },
+          ),
+        ],
       ),
-      actions: const [
-        Icon(Icons.more_vert,
-        color: Colors.black,
-        size:40,)
-      ],
-      ),
-      body: const Center(
+      body: Center(
         child: Text('Home Screen'),
       ),
-      );
+    );
   }
 }
